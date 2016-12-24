@@ -1,20 +1,31 @@
 def street_fighter_selection(vfighters, initial_position, moves):
-    top = fighters[0]
-    bottom = fighters[1]
     init_1, init_2 = initial_position
-    
+    char_list = []
+
+    if not len(moves):
+        return []
+
     for i in moves:
         if i == "up":
             if init_1 != 0:
-                current_row = top
+                init_1 = 0
         elif i == "down":
             if init_1 != 1:
-                current_row = bottom
-    print current
+                init_1 = 1
+        elif i == "right":
+            if init_2 == 5:
+                init_2 = 0
+            else:
+                init_2 += 1
+        else:
+            if init_2 == 0:
+                init_2 = 5
+            else:
+                init_2 -= 1
 
+        char_list.append(vfighters[init_1][init_2])
 
-
-
+    return char_list
 
 fighters = [
 	["Ryu", "E.Honda", "Blanka", "Guile", "Balrog", "Vega"],
@@ -24,6 +35,7 @@ fighters = [
 
 opts = ["up","down","right","left"]
 
-moves = ["down", "up", "left", "left", "up", "right"]
+# moves = ["down", "up", "left", "left", "up", "right"]
+moves = ["up", "up", "down", "left", "left", "right", "left", "right", "right"]
 
-street_fighter_selection(fighters,(0,0), moves)
+street_fighter_selection(fighters,(1,4), moves)
