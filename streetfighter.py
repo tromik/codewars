@@ -38,4 +38,4 @@ opts = ["up","down","right","left"]
 # moves = ["down", "up", "left", "left", "up", "right"]
 moves = ["up", "up", "down", "left", "left", "right", "left", "right", "right"]
 
-street_fighter_selection(fighters,(1,4), moves)
+print street_fighter_selection(fighters,(1,4), moves)
