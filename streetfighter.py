@@ -28,14 +28,14 @@ def street_fighter_selection(vfighters, initial_position, moves):
     return char_list
 
 fighters = [
-	["Ryu", "E.Honda", "Blanka", "Guile", "Balrog", "Vega"],
-	["Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison"]
+	["Ryu", "E.Honda", "Blanka ", "Guile  ", "Balrog", "Vega   "],
+	["Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat ", "M.Bison"]
 ]
 
 top_row = ', '.join(fighters[0]).replace(', ', ' | ')
-bottom_row = ', '.join(fighters[0]).replace(', ', ' | ')
+bottom_row = ', '.join(fighters[1]).replace(', ', ' | ')
 
-print 'C H A R A C T E R   S E L E C T'
+print  ' ' * 5 + 'C H A R A C T E R   S E L E C T'
 print top_row
 print bottom_row
 
@@ -44,4 +44,10 @@ opts = ["up","down","right","left"]
 # moves = ["down", "up", "left", "left", "up", "right"]
 moves = ["up", "up", "down", "left", "left", "right", "left", "right", "right"]
 
+print 'Input moves: ' + ', '.join(moves)
+print ''
+print 'Starting position: ' + fighters[1][4]
+print '-' * 40
+
+print 'Character chain and final character:'
 print street_fighter_selection(fighters,(1,4), moves)
