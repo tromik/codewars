@@ -32,6 +32,12 @@ fighters = [
 	["Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison"]
 ]
 
+top_row = ', '.join(fighters[0]).replace(', ', ' | ')
+bottom_row = ', '.join(fighters[0]).replace(', ', ' | ')
+
+print 'C H A R A C T E R   S E L E C T'
+print top_row
+print bottom_row
 
 opts = ["up","down","right","left"]
 
