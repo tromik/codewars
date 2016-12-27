@@ -11,3 +11,5 @@ def product(s):
 print product('')
 print product('!')
 print product('!!??!!')
+
+# blah blah
