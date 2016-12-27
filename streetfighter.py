@@ -1,7 +1,7 @@
 def street_fighter_selection(vfighters, initial_position, moves):
     init_1, init_2 = initial_position
     char_list = []
-
+    # blah
     if not len(moves):
         return []
 
