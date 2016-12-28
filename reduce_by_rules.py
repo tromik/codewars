@@ -11,6 +11,7 @@ def reduce_by_rules(lst, rules):
     return lst[0]
 
 
+
 # test.it("Rules: [a + b, a - b]")
 rules = [lambda a, b: a + b, lambda a, b: a - b]
 
