@@ -1,5 +1,5 @@
 def reduce_by_rules(lst, rules):
-    while len(lst) > 1:
+    while True:
         for rule in rules:
             if len(lst) == 1:
                 return lst[0]
